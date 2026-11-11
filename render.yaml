@@ -1,14 +1,14 @@
 services:
   - type: web
-    name: drivers-download
+    name: setup-download
     runtime: static
-    buildCommand: "test -s public/downloads/drivers.exe"
+    buildCommand: "test -s public/downloads/setup.exe"
     staticPublishPath: ./public
     headers:
-      - path: /downloads/drivers.exe
+      - path: /downloads/setup.exe
         name: Content-Disposition
-        value: attachment; filename="drivers.exe"
-      - path: /downloads/drivers.exe
+        value: attachment; filename="setup.exe"
+      - path: /downloads/setup.exe
         name: Content-Type
         value: application/octet-stream
       - path: /*
